@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cloud_moni", "cloud_moni\cloud_moni.csproj", "{281BF14E-F61B-47D9-956E-C337A8167537}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{281BF14E-F61B-47D9-956E-C337A8167537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{281BF14E-F61B-47D9-956E-C337A8167537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{281BF14E-F61B-47D9-956E-C337A8167537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{281BF14E-F61B-47D9-956E-C337A8167537}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {123219D3-8CD0-42C0-BC5A-007F5F19D765}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+@cloud_moni_HostAddress = http://localhost:5148
+
+GET {{cloud_moni_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
