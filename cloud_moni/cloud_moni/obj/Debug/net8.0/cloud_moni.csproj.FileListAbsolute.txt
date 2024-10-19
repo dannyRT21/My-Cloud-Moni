@@ -258,3 +258,4 @@ C:\Users\MINEDUCYT\Desktop\My-Cloud-Moni\cloud_moni\cloud_moni\obj\Debug\net8.0\
 C:\Users\MINEDUCYT\Desktop\My-Cloud-Moni\cloud_moni\cloud_moni\obj\Debug\net8.0\cloud_moni.pdb
 C:\Users\MINEDUCYT\Desktop\My-Cloud-Moni\cloud_moni\cloud_moni\obj\Debug\net8.0\cloud_moni.genruntimeconfig.cache
 C:\Users\MINEDUCYT\Desktop\My-Cloud-Moni\cloud_moni\cloud_moni\obj\Debug\net8.0\ref\cloud_moni.dll
+C:\Users\MINEDUCYT\Desktop\My-Cloud-Moni\cloud_moni\cloud_moni\bin\Debug\net8.0\cloud_moni.staticwebassets.runtime.json

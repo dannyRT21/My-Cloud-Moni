@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using cloud_moni.models;
 
 namespace cloud_moni.Controllers
+
 {
     [Route("api/[controller]")]
     [ApiController]

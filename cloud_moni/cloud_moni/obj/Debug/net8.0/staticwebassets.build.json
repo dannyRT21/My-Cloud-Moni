@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "M9cmT1/eYzA3lzEEUMAsE1dNNqSOYMfse/Cx7aLwsJE=",
+  "Hash": "E8r2fSEbUKw5QhZ40FXQdHE4LQIc8TN9vU2ueXHnj1I=",
   "Source": "cloud_moni",
   "BasePath": "_content/cloud_moni",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "cloud_moni\\wwwroot",
+      "Source": "cloud_moni",
+      "ContentRoot": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
+      "BasePath": "_content/cloud_moni",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }
