@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "E8r2fSEbUKw5QhZ40FXQdHE4LQIc8TN9vU2ueXHnj1I=",
+  "Hash": "29dZEd6vq4T4zHl/Fm1ppI4QALcQjdUTnnZtcqROhFg=",
   "Source": "cloud_moni",
   "BasePath": "_content/cloud_moni",
   "Mode": "Default",
@@ -10,10 +10,30 @@
     {
       "Name": "cloud_moni\\wwwroot",
       "Source": "cloud_moni",
-      "ContentRoot": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\olimp\\OneDrive\\Escritorio\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
       "BasePath": "_content/cloud_moni",
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\olimp\\OneDrive\\Escritorio\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\Usuario.html",
+      "SourceId": "cloud_moni",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\olimp\\OneDrive\\Escritorio\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
+      "BasePath": "_content/cloud_moni",
+      "RelativePath": "views/Usuario.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\views\\Usuario.html"
+    }
+  ]
 }

@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\olimp\\OneDrive\\Escritorio\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\Usuario.html",
+      "PackagePath": "staticwebassets\\views\\Usuario.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.cloud_moni.props",
+      "PackagePath": "build\\cloud_moni.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.cloud_moni.props",
+      "PackagePath": "buildMultiTargeting\\cloud_moni.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.cloud_moni.props",
+      "PackagePath": "buildTransitive\\cloud_moni.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.cloud_moni.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
