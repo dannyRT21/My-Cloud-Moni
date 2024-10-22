@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cloud Moni - Rastreador de Gastos</title>
+    <style>
+        body {
+            font-family: Georgia, sans-serif;
+            background: url('ruta_de_tu_imagen') no-repeat center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="date"], select, button {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+            .input-group span {
+                font-size: 16px;
+                padding: 8px 10px;
+                background-color: #f0f0f0;
+                border-right: 1px solid #ccc;
+            }
+
+            .input-group input {
+                border: none;
+                outline: none;
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+            }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+
+        .cancel-btn {
+            background-color: #6c757d;
+        }
+
+            .cancel-btn:hover {
+                background-color: #5a6268;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Rastreador de Gastos</h1>
+        <form action="ruta_a_tu_archivo_de_procesamiento" id="formGastos">
+            <label for="categoria">Categoría:</label>
+            <select name="categoria" id="categoria" required>
+                <option value="" disabled selected>Selecciona una categoría</option>
+                <option value="recibo_luz">Recibo de Luz</option>
+                <option value="recibo_agua">Recibo de Agua</option>
+                <option value="linea_telefono">Línea de Teléfono</option>
+                <option value="gastos_personales">Gastos Personales</option>
+                <option value="utiles_escolares">Útiles Escolares</option>
+                <option value="articulos_higiene">Artículos de Higiene</option>
+            </select>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" name="fecha" id="fecha" required>
+
+            <label for="concepto">Concepto:</label>
+            <input type="text" name="concepto" id="concepto" placeholder="Concepto" required>
+
+            <label for="total">Total (USD):</label>
+            <div class="input-group">
+                <span>$</span>
+                <input type="text" name="total" id="total" placeholder="0.00" inputmode="decimal" required>
+            </div>
+
+            <button type="submit">Guardar</button>
+            <button type="button" class="cancel-btn">Cancelar</button>
+        </form>
+    </div>
+
+    <script>
+        const totalInput = document.getElementById('total');
+
+        // Función para formatear con comas y permitir solo números y un punto decimal
+        totalInput.addEventListener('input', function (event) {
+            // Reemplazar letras con una alerta si se ingresan
+            const valorActual = event.target.value.replace(/,/g, '');
+
+            // Verificar si el valor es válido (números o un punto decimal)
+            if (!/^[\d.]*$/.test(valorActual)) {
+                alert('Solo puedes ingresar números');
+                event.target.value = event.target.value.slice(0, -1); // Elimina el último carácter no válido
+                return;
+            }
+
+            // Formatear con comas si es necesario
+            if (valorActual) {
+                const partes = valorActual.split('.');
+                const parteEntera = partes[0];
+                const parteDecimal = partes[1] || '';
+
+                // Formatear la parte entera con comas
+                event.target.value = parteEntera.replace(/\B(?=(\d{3})+(?!\d))/g, ',') + (parteDecimal ? `.${parteDecimal}` : '');
+            }
+        });
+
+        // Prevenir la inserción de más de un punto decimal y permitir solo números y punto
+        totalInput.addEventListener('keydown', function (event) {
+            const key = event.key;
+            const valorActual = event.target.value;
+
+            // Permitir solo números, Backspace, flechas, punto decimal y teclas de navegación
+            if (!/[0-9.]/.test(key) &&
+                !['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Tab'].includes(key)) {
+                event.preventDefault();
+                alert('Solo puedes ingresar números o un punto decimal');
+            }
+
+            // Prevenir que se ingrese más de un punto decimal
+            if (key === '.' && valorActual.includes('.')) {
+                event.preventDefault();
+            }
+        });
+
+        // Remover las comas antes de enviar el formulario
+        document.getElementById('formGastos').addEventListener('submit', function (event) {
+            const valorFinal = totalInput.value.replace(/,/g, '');
+            totalInput.value = valorFinal; // Remueve las comas antes de enviar
+        });
+    </script>
+
+</body>
+</html>

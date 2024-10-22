@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cloud Moni - Registro</title>
+    <title>My Cloud Moni - Login</title>
     <style>
         body {
             font-family: Georgia, sans-serif;
-            background: url('ruta_de_tu_imagen') no-repeat center center/;
+            background: url('ruta_de_tu_imagen') no-repeat center center;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -29,7 +29,7 @@
             font-family: 'Courier New', Courier, monospace;
         }
 
-        input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="tel"], button {
+        input[type="text"], input[type="email"], input[type="password"], button {
             width: 100%;
             padding: 12px;
             margin: 8px 0;
@@ -63,14 +63,11 @@
 
     <div class="form-container">
         <h1>My Cloud Moni</h1>
-        <p>Regístrate por favor para iniciar</p>
-        <form action="ruta_a_tu_archivo_de_procesamiento">
-            <input type="text" name="nombre" placeholder="Nombre" required>
+        <p>Inicia sesión por favor</p>
+        <form action="ruta_a_tu_archivo_de_procesamiento_login" method="POST">
             <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Contraseña" required>
-            <input type="date" name="fecha_nacimiento" placeholder="Fecha de nacimiento" required>
-            <input type="tel" name="telefono" placeholder="Teléfono" required>
-            <button type="submit">Registrarse</button>
+            <button type="submit">Iniciar Sesión</button>
             <button type="button" class="cancel-btn">Cancelar</button>
         </form>
     </div>
