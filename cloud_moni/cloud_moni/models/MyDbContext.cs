@@ -13,6 +13,9 @@ namespace cloud_moni.models
 
         public MyDbContext(DbContextOptions<MyDbContext> options) : base(options) { }
         public DbSet<Usuarios> Usuarios { get; set; }
+
+        public DbSet<Login> Login { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

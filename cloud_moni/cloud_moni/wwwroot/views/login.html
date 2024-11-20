@@ -54,9 +54,13 @@
             background-color: #6c757d;
         }
 
-            .cancel-btn:hover {
-                background-color: #5a6268;
-            }
+        .cancel-btn:hover {
+            background-color: #5a6268;
+        }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -64,13 +68,53 @@
     <div class="form-container">
         <h1>My Cloud Moni</h1>
         <p>Inicia sesión por favor</p>
-        <form action="ruta_a_tu_archivo_de_procesamiento_login" method="POST">
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Contraseña" required>
+        <form id="loginForm">
+            <input type="text" name="usuario" id="usuario" placeholder="Email" required>
+            <input type="password" name="clave" id="clave" placeholder="Contraseña" required>
             <button type="submit">Iniciar Sesión</button>
             <button type="button" class="cancel-btn">Cancelar</button>
+
+            <div id="errorMessage" class=""></div>
         </form>
     </div>
+
+    <script>
+    document.getElementById('loginForm').addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        const usuario = document.getElementById('usuario').value;
+        const clave = document.getElementById('clave').value;
+
+        const loginData = {
+            usuario: usuario,
+            clave: clave
+        };
+
+        try {
+            const response = await fetch('https://localhost:7081/api/usuarios/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(loginData)
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                alert(data.message);
+                window.location.href = 'https://localhost:7081/views/rastreador.html';
+            } else {
+                document.getElementById('errorMessage').textContent = data.message;
+                document.getElementById('errorMessage').classList.remove('hidden');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            document.getElementById('errorMessage').textContent = 'Hubo un error al procesar la solicitud.';
+            document.getElementById('errorMessage').classList.remove('hidden');
+        }
+    });
+    </script>
 
 </body>
 </html>

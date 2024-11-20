@@ -110,15 +110,15 @@
   },
   {
     "ContainingType": "cloud_moni.Controllers.UsuariosController",
-    "Method": "RegistrarUsuario",
-    "RelativePath": "api/Usuarios/registrar",
+    "Method": "Login",
+    "RelativePath": "api/Usuarios/login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "usuario",
-        "Type": "cloud_moni.models.Usuarios",
+        "Name": "usuarioLogin",
+        "Type": "cloud_moni.models.Login",
         "IsRequired": true
       }
     ],

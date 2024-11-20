@@ -100,6 +100,25 @@ namespace cloud_moni.Controllers
             return NoContent();
         }
 
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] Login usuarioLogin)
+        {
+            if (usuarioLogin == null || string.IsNullOrEmpty(usuarioLogin.usuario) || string.IsNullOrEmpty(usuarioLogin.clave))
+            {
+                return BadRequest(new { message = "Usuario y clave son requeridos" });
+            }
+
+            var usuario = await _context.Usuarios
+                .FirstOrDefaultAsync(u => u.usuario == usuarioLogin.usuario && u.clave == usuarioLogin.clave);
+
+            if (usuario == null)
+            {
+                return Unauthorized(new { message = "Credenciales incorrectas" });
+            }
+
+            return Ok(new { message = "Login exitoso", usuario = usuario.nombre });
+        }
+
         private bool UsuariosExists(int id)
         {
             return _context.Usuarios.Any(e => e.idUsuario == id);
