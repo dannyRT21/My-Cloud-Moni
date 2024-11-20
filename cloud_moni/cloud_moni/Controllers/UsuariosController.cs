@@ -116,7 +116,7 @@ namespace cloud_moni.Controllers
                 return Unauthorized(new { message = "Credenciales incorrectas" });
             }
 
-            return Ok(new { message = "Login exitoso", usuario = usuario.nombre });
+            return Ok(new { message = "Login exitoso", usuario = usuario.idUsuario });
         }
 
         private bool UsuariosExists(int id)
