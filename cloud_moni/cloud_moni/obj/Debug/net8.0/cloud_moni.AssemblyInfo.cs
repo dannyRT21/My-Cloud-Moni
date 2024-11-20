@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cloud_moni")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+745bd6e0a9d0cdaf6ed83695e39c22e6837313a5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+192f8fb4c946102c42a7cada7e3558d2848290ed")]
 [assembly: System.Reflection.AssemblyProductAttribute("cloud_moni")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cloud_moni")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

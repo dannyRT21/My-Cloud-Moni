@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3qGDxWDHqTWQ7s/5coeAjeJYiGczkdX1E+rSOMDbBh0=",
+  "Hash": "3oYMP6tdZrx4Wv5ZDB/RmQwObQNoyx5gd/P7EtxCnSY=",
   "Source": "cloud_moni",
   "BasePath": "_content/cloud_moni",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "cloud_moni\\wwwroot",
       "Source": "cloud_moni",
-      "ContentRoot": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
       "BasePath": "_content/cloud_moni",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\login.html",
+      "Identity": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\login.html",
       "SourceId": "cloud_moni",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
       "BasePath": "_content/cloud_moni",
       "RelativePath": "views/login.html",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\views\\login.html"
     },
     {
-      "Identity": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\rastreador.html",
+      "Identity": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\rastreador.html",
       "SourceId": "cloud_moni",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
       "BasePath": "_content/cloud_moni",
       "RelativePath": "views/rastreador.html",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\views\\rastreador.html"
     },
     {
-      "Identity": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\Usuario.html",
+      "Identity": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\Usuario.html",
       "SourceId": "cloud_moni",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
       "BasePath": "_content/cloud_moni",
       "RelativePath": "views/Usuario.html",
       "AssetKind": "All",
