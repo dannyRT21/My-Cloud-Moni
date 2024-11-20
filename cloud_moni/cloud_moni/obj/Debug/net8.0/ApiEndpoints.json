@@ -1,21 +1,5 @@
 [
   {
-    "ContainingType": "cloud_moni.Controllers.PageController",
-    "Method": "Home",
-    "RelativePath": "",
-    "HttpMethod": "",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "page",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "cloud_moni.Controllers.UsuariosController",
     "Method": "GetUsuarios",
     "RelativePath": "api/Usuarios",
@@ -37,7 +21,7 @@
   },
   {
     "ContainingType": "cloud_moni.Controllers.UsuariosController",
-    "Method": "PostUsuarios",
+    "Method": "PostUsuario",
     "RelativePath": "api/Usuarios",
     "HttpMethod": "POST",
     "IsController": true,
@@ -125,27 +109,17 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "cloud_moni.Controllers.PageController",
-    "Method": "Login",
-    "RelativePath": "pagina/login",
-    "HttpMethod": "",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "cloud_moni.Controllers.PageController",
-    "Method": "Register",
-    "RelativePath": "pagina/register",
-    "HttpMethod": "",
+    "ContainingType": "cloud_moni.Controllers.UsuariosController",
+    "Method": "RegistrarUsuario",
+    "RelativePath": "api/Usuarios/registrar",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "page",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "usuario",
+        "Type": "cloud_moni.models.Usuarios",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

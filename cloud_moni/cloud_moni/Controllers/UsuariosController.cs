@@ -76,37 +76,12 @@ namespace cloud_moni.Controllers
         // POST: api/Usuarios
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Usuarios>> PostUsuarios(Usuarios usuarios)
+        public async Task<ActionResult<Usuarios>> PostUsuario(Usuarios usuarios)
         {
             _context.Usuarios.Add(usuarios);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUsuario", new { id = usuarios.idUsuario }, usuarios);
-        }
-
-        // POST: api/usuarios/registrar
-        [HttpPost("registrar")]
-        public async Task<IActionResult> RegistrarUsuario([FromBody] Usuarios usuario)
-        {
-            if (usuario == null)
-            {
-                return BadRequest("Datos inválidos");
-            }
-
-            // Validar que no exista el usuario
-            var existingUser = await _context.Usuarios
-                .FirstOrDefaultAsync(u => u.usuario == usuario.usuario);
-
-            if (existingUser != null)
-            {
-                return Conflict("El usuario ya existe");
-            }
-
-            // Crear el nuevo usuario
-            _context.Usuarios.Add(usuario);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(RegistrarUsuario), new { id = usuario.idUsuario }, usuario);
+            return CreatedAtAction("GetUsuarios", new { id = usuarios.idUsuario }, usuarios);
         }
 
         // DELETE: api/Usuarios/5
