@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "cloud_moni.Controllers.PageController",
+    "Method": "Home",
+    "RelativePath": "",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "cloud_moni.Controllers.UsuariosController",
     "Method": "GetUsuarios",
     "RelativePath": "api/Usuarios",
@@ -104,6 +120,32 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "cloud_moni.Controllers.PageController",
+    "Method": "Login",
+    "RelativePath": "pagina/login",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "cloud_moni.Controllers.PageController",
+    "Method": "Register",
+    "RelativePath": "pagina/register",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

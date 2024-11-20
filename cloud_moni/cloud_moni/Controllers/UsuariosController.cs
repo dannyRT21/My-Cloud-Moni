@@ -32,14 +32,14 @@ namespace cloud_moni.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Usuarios>> GetUsuarios(int id)
         {
-            var usuarios = await _context.Usuarios.FindAsync(id);
+            var usuario = await _context.Usuarios.FindAsync(id);
 
-            if (usuarios == null)
+            if (usuario == null)
             {
                 return NotFound();
             }
 
-            return usuarios;
+            return usuario;
         }
 
         // PUT: api/Usuarios/5
@@ -81,7 +81,32 @@ namespace cloud_moni.Controllers
             _context.Usuarios.Add(usuarios);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUsuarios", new { id = usuarios.idUsuario }, usuarios);
+            return CreatedAtAction("GetUsuario", new { id = usuarios.idUsuario }, usuarios);
+        }
+
+        // POST: api/usuarios/registrar
+        [HttpPost("registrar")]
+        public async Task<IActionResult> RegistrarUsuario([FromBody] Usuarios usuario)
+        {
+            if (usuario == null)
+            {
+                return BadRequest("Datos inválidos");
+            }
+
+            // Validar que no exista el usuario
+            var existingUser = await _context.Usuarios
+                .FirstOrDefaultAsync(u => u.usuario == usuario.usuario);
+
+            if (existingUser != null)
+            {
+                return Conflict("El usuario ya existe");
+            }
+
+            // Crear el nuevo usuario
+            _context.Usuarios.Add(usuario);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(RegistrarUsuario), new { id = usuario.idUsuario }, usuario);
         }
 
         // DELETE: api/Usuarios/5
