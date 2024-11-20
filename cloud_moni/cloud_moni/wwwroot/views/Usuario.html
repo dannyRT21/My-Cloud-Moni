@@ -104,8 +104,9 @@
                     body: JSON.stringify(userData)
                 });
 
-                if (response.ok) {
-                    alertlocalStorage.setItem('idUsuario', data.usuario);
+            if (response.ok) {
+                    const data = await response.json();
+                    localStorage.setItem('idUsuario', data.idUsuario);
                     window.location.href = 'https://localhost:7081/views/rastreador.html';
                 } else {
                     alert('Hubo un problema al registrar al usuario');
