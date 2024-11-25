@@ -1,27 +1,27 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\MINEDUCYT\\Desktop\\tengomiedo\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\img\\logo.jpeg",
+      "Id": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\img\\logo.jpeg",
       "PackagePath": "staticwebassets\\img\\logo.jpeg"
     },
     {
-      "Id": "C:\\Users\\MINEDUCYT\\Desktop\\tengomiedo\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\img\\logo1.jpeg",
+      "Id": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\img\\logo1.jpeg",
       "PackagePath": "staticwebassets\\img\\logo1.jpeg"
     },
     {
-      "Id": "C:\\Users\\MINEDUCYT\\Desktop\\tengomiedo\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\Usuario.html",
+      "Id": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\Usuario.html",
       "PackagePath": "staticwebassets\\views\\Usuario.html"
     },
     {
-      "Id": "C:\\Users\\MINEDUCYT\\Desktop\\tengomiedo\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\index.html",
+      "Id": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\index.html",
       "PackagePath": "staticwebassets\\views\\index.html"
     },
     {
-      "Id": "C:\\Users\\MINEDUCYT\\Desktop\\tengomiedo\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\login.html",
+      "Id": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\login.html",
       "PackagePath": "staticwebassets\\views\\login.html"
     },
     {
-      "Id": "C:\\Users\\MINEDUCYT\\Desktop\\tengomiedo\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\rastreador.html",
+      "Id": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\rastreador.html",
       "PackagePath": "staticwebassets\\views\\rastreador.html"
     },
     {

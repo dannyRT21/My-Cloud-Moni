@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HVH8gWwWq5M=",
+  "dgSpecHash": "60VMKsXLeyU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\MINEDUCYT\\Desktop\\tengomiedo\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\cloud_moni.csproj",
+  "projectFilePath": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\cloud_moni.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MINEDUCYT\\.nuget\\packages\\azure.core\\1.44.1\\azure.core.1.44.1.nupkg.sha512",
     "C:\\Users\\MINEDUCYT\\.nuget\\packages\\azure.identity\\1.13.0\\azure.identity.1.13.0.nupkg.sha512",

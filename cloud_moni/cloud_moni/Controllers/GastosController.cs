@@ -21,10 +21,33 @@ namespace cloud_moni.controllers
         }
 
         // Método para obtener todos los gastos de un usuario
+        //[HttpGet("usuario/{idUsuario}")]
+        //public async Task<ActionResult<IEnumerable<Gastos>>> GastUsuario(int idUsuario)
+        //{
+        //    var gastos = await _context.Gastos.Where(g => g.IdUsuario == idUsuario).ToListAsync();
+        //    return Ok(gastos);
+        //}
+
         [HttpGet("usuario/{idUsuario}")]
-        public async Task<ActionResult<IEnumerable<Gastos>>> GastUsuario(int idUsuario)
+        public async Task<ActionResult<IEnumerable<Gastos>>> GastosFiltrados(int idUsuario, [FromQuery] string? categoria, [FromQuery] DateTime? fecha)
         {
-            var gastos = await _context.Gastos.Where(g => g.IdUsuario == idUsuario).ToListAsync();
+            // Iniciamos la consulta básica para obtener los gastos del usuario.
+            var query = _context.Gastos.Where(g => g.IdUsuario == idUsuario);
+
+            // Si la categoría está especificada, filtramos por ella.
+            if (!string.IsNullOrEmpty(categoria))
+            {
+                query = query.Where(g => g.Categoria.Contains(categoria));
+            }
+
+            // Si la fecha está especificada, filtramos por esa fecha (comparando solo la fecha, sin la hora).
+            if (fecha.HasValue)
+            {
+                query = query.Where(g => g.Fecha.Date == fecha.Value.Date);  // Comparar solo la parte de la fecha.
+            }
+
+            // Ejecutamos la consulta y devolvemos la lista de gastos filtrada.
+            var gastos = await query.ToListAsync();
             return Ok(gastos);
         }
 
@@ -76,5 +99,6 @@ namespace cloud_moni.controllers
             _context.SaveChanges();
             return Ok();
         }
+
     }
 }
