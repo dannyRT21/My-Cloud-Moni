@@ -15,7 +15,33 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "cloud_moni.models.Usuarios",
+        "Type": "cloud_moni.models.Gastos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "cloud_moni.controllers.GastosController",
+    "Method": "GetGasto",
+    "RelativePath": "api/Gastos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "cloud_moni.models.Gastos",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -61,32 +87,6 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "cloud_moni.controllers.GastosController",
-    "Method": "GetGasto",
-    "RelativePath": "api/Gastos/{idGasto}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "idGasto",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "cloud_moni.models.Gastos",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
   },
   {
     "ContainingType": "cloud_moni.controllers.GastosController",

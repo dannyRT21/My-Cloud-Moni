@@ -213,6 +213,39 @@
             </table>
         </div>
 
+        <!-- Modal para editar gasto -->
+        <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editarModalLabel">Editar Gasto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formEditarGasto">
+                            <input type="hidden" id="editarIdGasto" />
+                            <select name="categoria" id="editarCategoria" class="form-control" required>
+                                <option value="" disabled>Selecciona una categoría</option>
+                                <option value="recibo_luz">Recibo de Luz</option>
+                                <option value="recibo_agua">Recibo de Agua</option>
+                                <option value="linea_telefono">Línea de Teléfono</option>
+                                <option value="gastos_personales">Gastos Personales</option>
+                                <option value="utiles_escolares">Útiles Escolares</option>
+                                <option value="articulos_higiene">Artículos de Higiene</option>
+                            </select>
+                            <input type="date" name="fecha" id="editarFecha" class="form-control" required>
+                            <input type="text" name="concepto" id="editarConcepto" class="form-control" placeholder="Concepto" required>
+                            <input type="number" name="total" id="editarTotal" class="form-control" placeholder="0.00" step="0.01" required>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" onclick="guardarEdicion()">Guardar Cambios</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Enlace a la página de gráficos -->
         <a href="pagina_de_graficos.html" class="chart-link">Ver Gráficos de Gastos</a>
     </div>
@@ -280,6 +313,55 @@
             }
         };
 
+
+        const agregarGasto = async (e) => {
+            e.preventDefault();
+
+            const categoria = document.getElementById('categoria').value;
+            const fecha = document.getElementById('fecha').value;
+            const concepto = document.getElementById('concepto').value;
+            const total = parseFloat(document.getElementById('total').value);
+
+            if (!categoria || !fecha || !concepto || isNaN(total) || total <= 0) {
+                alert('Por favor, complete todos los campos correctamente.');
+                return;
+            }
+
+            const nuevoGasto = { categoria, fecha, concepto, total, idUsuario };
+
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(nuevoGasto),
+            });
+
+            if (response.ok) {
+                alert('Gasto agregado con éxito.');
+                document.getElementById('formGastos').reset();
+                cargarInfoUsuario();
+            } else {
+                alert('Error al agregar gasto.');
+            }
+        };
+
+        document.getElementById('formGastos').addEventListener('submit', agregarGasto);
+
+
+        const editarGasto = async (idGasto) => {
+            const response = await fetch(`${apiUrl}/${idGasto}`);
+            const gasto = await response.json();
+
+            document.getElementById('editarIdGasto').value = gasto.idGasto;
+            document.getElementById('editarCategoria').value = gasto.categoria;
+            document.getElementById('editarFecha').value = gasto.fecha.split('T')[0];
+            document.getElementById('editarConcepto').value = gasto.concepto;
+            document.getElementById('editarTotal').value = gasto.total;
+
+            const editarModal = new bootstrap.Modal(document.getElementById('editarModal'));
+            editarModal.show();
+        };
+
+
         // Función para buscar gastos por categoría y fecha
         const buscarGastos = async () => {
             const categoria = document.getElementById('searchCategory').value;
@@ -310,25 +392,49 @@
             });
         };
 
-        // Validación de formulario antes de enviar
-        const form = document.getElementById('formGastos');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
+        const guardarEdicion = async () => {
+            const idGasto = document.getElementById('editarIdGasto').value;
+            const categoria = document.getElementById('editarCategoria').value;
+            const fecha = document.getElementById('editarFecha').value;
+            const concepto = document.getElementById('editarConcepto').value;
+            const total = parseFloat(document.getElementById('editarTotal').value);
 
-            const categoria = document.getElementById('categoria').value;
-            const fecha = document.getElementById('fecha').value;
-            const concepto = document.getElementById('concepto').value;
-            const total = parseFloat(document.getElementById('total').value);
-
-            // Verificar que los campos no estén vacíos y que el total sea un número válido
             if (!categoria || !fecha || !concepto || isNaN(total) || total <= 0) {
                 alert('Por favor, complete todos los campos correctamente.');
                 return;
             }
 
-            // Enviar formulario si todo es válido
-            // Aquí iría el código para guardar el gasto en la base de datos
-        });
+            const gastoActualizado = { idGasto, categoria, fecha, concepto, total };
+
+            const response = await fetch(`${apiUrl}/${idGasto}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(gastoActualizado),
+            });
+
+            if (response.ok) {
+                alert('Gasto actualizado con éxito.');
+                const editarModal = bootstrap.Modal.getInstance(document.getElementById('editarModal'));
+                editarModal.hide();
+                cargarInfoUsuario();
+            } else {
+                alert('Error al actualizar gasto.');
+            }
+        };
+
+        const eliminarGasto = async (idGasto) => {
+            const confirmacion = window.confirm('¿Estás seguro de que quieres eliminar este gasto?');
+            if (confirmacion) {
+                const response = await fetch(`${apiUrl}/${idGasto}`, { method: 'DELETE' });
+
+                if (response.ok) {
+                    alert('Gasto eliminado con éxito.');
+                    cargarInfoUsuario();
+                } else {
+                    alert('Error al eliminar gasto.');
+                }
+            }
+        };
 
         cargarInfoUsuario();
     </script>

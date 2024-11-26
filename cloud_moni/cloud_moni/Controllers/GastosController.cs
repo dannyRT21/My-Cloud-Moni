@@ -52,10 +52,10 @@ namespace cloud_moni.controllers
         }
 
         // Método para obtener un gasto específico
-        [HttpGet("{idGasto}")]
-        public async Task<ActionResult<Gastos>> GetGasto(int idGasto)
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Gastos>> GetGasto(int id)
         {
-            var gasto = await _context.Gastos.FindAsync(idGasto);
+            var gasto = await _context.Gastos.FindAsync(id);
             if (gasto == null)
             {
                 return NotFound();
@@ -65,11 +65,11 @@ namespace cloud_moni.controllers
 
         // Crear un nuevo gasto
         [HttpPost]
-        public async Task<ActionResult<Usuarios>> CreateGasto(Gastos gasto)
+        public async Task<ActionResult<Gastos>> CreateGasto(Gastos gasto)
         {
             _context.Gastos.Add(gasto);
             await _context.SaveChangesAsync();
-            return CreatedAtAction("GetGasto", new { id = gasto.IdGasto }, gasto);
+            return CreatedAtAction(nameof(GetGasto), new { id = gasto.IdGasto }, gasto);
         }
 
         // Actualizar un gasto existente
