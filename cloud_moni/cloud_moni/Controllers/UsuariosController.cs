@@ -88,13 +88,18 @@ namespace cloud_moni.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUsuarios(int id)
         {
-            var usuarios = await _context.Usuarios.FindAsync(id);
-            if (usuarios == null)
+            var usuario = await _context.Usuarios.FindAsync(id);
+            if (usuario == null)
             {
                 return NotFound();
             }
 
-            _context.Usuarios.Remove(usuarios);
+            // Obtener y eliminar los gastos asociados al usuario
+            var gastos = _context.Gastos.Where(g => g.IdUsuario == id);
+            _context.Gastos.RemoveRange(gastos);
+
+            // Eliminar el usuario
+            _context.Usuarios.Remove(usuario);
             await _context.SaveChangesAsync();
 
             return NoContent();
