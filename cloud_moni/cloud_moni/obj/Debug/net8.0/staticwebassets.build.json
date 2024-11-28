@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QztB6TVh7JXYLvx1BXYBPjzvsYqPyk+naF0oLf3nXfg=",
+  "Hash": "jTz7ODOQvr8YnJm6C4xLUDF59JggT3N0AZaWYHpjONU=",
   "Source": "cloud_moni",
   "BasePath": "_content/cloud_moni",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "cloud_moni\\wwwroot",
       "Source": "cloud_moni",
-      "ContentRoot": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
       "BasePath": "_content/cloud_moni",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\img\\logo.jpeg",
+      "Identity": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\img\\logo.jpeg",
       "SourceId": "cloud_moni",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
       "BasePath": "_content/cloud_moni",
       "RelativePath": "img/logo.jpeg",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\img\\logo.jpeg"
     },
     {
-      "Identity": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\img\\logo1.jpeg",
+      "Identity": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\img\\logo1.jpeg",
       "SourceId": "cloud_moni",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
       "BasePath": "_content/cloud_moni",
       "RelativePath": "img/logo1.jpeg",
       "AssetKind": "All",
@@ -55,10 +55,29 @@
       "OriginalItemSpec": "wwwroot\\img\\logo1.jpeg"
     },
     {
-      "Identity": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\index.html",
+      "Identity": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\graficas.html",
       "SourceId": "cloud_moni",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
+      "BasePath": "_content/cloud_moni",
+      "RelativePath": "views/graficas.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\views\\graficas.html"
+    },
+    {
+      "Identity": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\index.html",
+      "SourceId": "cloud_moni",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
       "BasePath": "_content/cloud_moni",
       "RelativePath": "views/index.html",
       "AssetKind": "All",
@@ -74,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\views\\index.html"
     },
     {
-      "Identity": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\login.html",
+      "Identity": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\login.html",
       "SourceId": "cloud_moni",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
       "BasePath": "_content/cloud_moni",
       "RelativePath": "views/login.html",
       "AssetKind": "All",
@@ -93,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\views\\login.html"
     },
     {
-      "Identity": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\rastreador.html",
+      "Identity": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\rastreador.html",
       "SourceId": "cloud_moni",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
       "BasePath": "_content/cloud_moni",
       "RelativePath": "views/rastreador.html",
       "AssetKind": "All",
@@ -112,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\views\\rastreador.html"
     },
     {
-      "Identity": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\Usuario.html",
+      "Identity": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\views\\Usuario.html",
       "SourceId": "cloud_moni",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\wwwroot\\",
       "BasePath": "_content/cloud_moni",
       "RelativePath": "views/Usuario.html",
       "AssetKind": "All",

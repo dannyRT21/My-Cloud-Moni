@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\cloud_moni.csproj": {}
+    "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\cloud_moni.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\cloud_moni.csproj": {
+    "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\cloud_moni.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\cloud_moni.csproj",
+        "projectUniqueName": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\cloud_moni.csproj",
         "projectName": "cloud_moni",
-        "projectPath": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\cloud_moni.csproj",
+        "projectPath": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\cloud_moni.csproj",
         "packagesPath": "C:\\Users\\MINEDUCYT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MINEDUCYT\\Source\\Repos\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\obj\\",
+        "outputPath": "C:\\Users\\MINEDUCYT\\Desktop\\My-Cloud-Moni\\cloud_moni\\cloud_moni\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\MINEDUCYT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
